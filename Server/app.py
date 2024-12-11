@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-
+from datetime import datetime
 import subprocess
 import boto3
 from botocore.exceptions import NoCredentialsError
@@ -39,7 +39,9 @@ def download_audio():
     youtube_url = youtube_url.replace('https://', '')
     try:
         # Create a unique file name
-        output_file = "audio_output.mp3"
+        # Get Date and Time
+        date_time = datetime.now().strftime("%Y%m%d%H%M%S")
+        output_file = "audio_output_" + date_time + ".mp3"
 
         # Run yt-dlp command to download audio
         subprocess.run([
