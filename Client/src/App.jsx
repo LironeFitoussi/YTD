@@ -19,7 +19,7 @@ const App = () => {
     }
 
     try {
-      const response = await axios.get("http://localhost:5000/download-audio", {
+      const response = await axios.get("http://3.126.59.193:5000/download-audio", {
         params: { url: youtubeUrl },
       });
 
