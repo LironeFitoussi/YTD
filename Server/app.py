@@ -43,7 +43,7 @@ def download_audio():
 
         # Run yt-dlp command to download audio
         subprocess.run([
-            'yt-dlp_linux', '-x', '--audio-format', 'mp3', '--audio-quality', '0', '-o', output_file, youtube_url
+            '/usr/local/bin/yt-dlp', '-x', '--audio-format', 'mp3', '--audio-quality', '0', '-o', output_file, youtube_url
         ], check=False)
 
         # Upload to S3
