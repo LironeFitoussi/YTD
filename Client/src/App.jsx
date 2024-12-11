@@ -86,8 +86,7 @@ const App = () => {
         <div style={{ textAlign: "center", marginTop: "20px" }}>
           <a
             href={s3Link}
-            target="_blank"
-            rel="noopener noreferrer"
+            download
             style={{
               display: "block",
               textDecoration: "none",
